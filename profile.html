@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internship Profile Form</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Internship Profile Form</h2>
+    <form id="internForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10">
+
+      <label for="university">University/College:</label>
+      <input type="text" id="university" name="university" required>
+
+      <label for="degree">Degree:</label>
+      <select id="degree" name="degree" required>
+        <option value="">Select</option>
+        <option>B.Tech</option>
+        <option>M.Tech</option>
+        <option>BCA</option>
+        <option>MCA</option>
+      </select>
+
+      <label for="cgpa">CGPA/Percentage:</label>
+      <input type="text" id="cgpa" name="cgpa" required>
+
+      <label for="skills">Technical Skills (comma separated):</label>
+      <input type="text" id="skills" name="skills" placeholder="e.g., Python, React, MySQL" required>
+
+      <label for="domain">Preferred Domain:</label>
+      <select id="domain" name="domain" required>
+        <option value="">Select</option>
+        <option>Frontend Development</option>
+        <option>Backend Development</option>
+        <option>Full Stack Development</option>
+        <option>Mobile App Development</option>
+        <option>AI/ML</option>
+        <option>Cybersecurity</option>
+      </select>
+
+      <label for="resume">Upload Resume (PDF):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+      <label for="about">Tell us about yourself:</label>
+      <textarea id="about" name="about" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="successMessage" class="hidden">
+      🎉 Your internship profile has been submitted successfully!
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
